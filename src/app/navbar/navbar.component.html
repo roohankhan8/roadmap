@@ -1,0 +1,67 @@
+<style>
+  .btns {
+    box-shadow: rgb(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    width: 130px;
+  }
+</style>
+<!-- main header -->
+<div class="header">
+  <a (click)="goBack()">
+  <div class="logo">
+    <img
+      src="assets/icons/logbook.png"
+      alt="Logo"
+      width="40PX"
+      height="40px"
+    />
+  </div></a>
+  <!-- main header (notification) -->
+  <div class="d-flex flex-row">
+    <div>
+      <button
+        class="btn btn-light align-items left"
+        type="button"
+        id="notification"
+      >
+        <img
+          src="assets/icons/notification.png"
+          alt="notification"
+          height="30"
+        />
+      </button>
+    </div>
+    <!-- main header (more button) -->
+    <div class="dropdown">
+      <button
+        class="btn btn-light"
+        type="button"
+        id="moreOptionsDropdown"
+        data-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        <img src="assets/icons/rename.png" alt="more" height="30" />
+      </button>
+      <div
+        class="dropdown-menu dropdown-menu-right"
+        aria-labelledby="moreOptionsDropdown"
+      >
+        <a class="dropdown-item" href="{% url 'student_portal' %}"
+          >Student portal</a
+        >
+        <a class="dropdown-item" routerLink="">Preview logbook</a>
+        <a class="dropdown-item" routerLink="">Print logbook</a>
+        <a class="dropdown-item" routerLink="">View notes</a>
+        <a class="dropdown-item" routerLink="">Logout</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- main header ends -->
+<!-- second header  -->
+<nav class="navbars">
+  <div class="container-fluid-nav text-center">
+    <h5>Lets collaborate in teams to boost your productivity</h5>
+  </div>
+</nav>

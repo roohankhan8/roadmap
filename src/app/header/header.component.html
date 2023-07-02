@@ -1,0 +1,18 @@
+<div *ngIf="signin==true; else elseBlock" >
+<p>
+  <a [class.fw-bold]="onStudent" (click)="classAdd('student')" class="fw-bold cursor-pointer" href="#">Student</a> | 
+  <a [class.fw-bold]="onTeacher" (click)="classAdd('teacher')" [routerLink]="''">Teacher</a> |
+  <a [class.fw-bold]="onJudge" (click)="classAdd('judge')" href="#">Judge</a> |
+  <a [class.fw-bold]="onMentor" (click)="classAdd('mentor')" href="#">Mentor</a> |
+  <a [class.fw-bold]="onAdmin" (click)="classAdd('admin')" href="#">Admin</a>
+</p>
+</div>
+<ng-template #elseBlock>
+  <p>
+    <a [class.fw-bold]="onStudent" (click)="classAdd('student')" class="fw-bold cursor-pointer" routerLink="signup">Student</a> | 
+    <a [class.fw-bold]="onTeacher" (click)="classAdd('teacher')" routerLink="signup">Teacher</a> |
+    <a [class.fw-bold]="onJudge" (click)="classAdd('judge')" routerLink="signup">Judge</a> |
+    <a [class.fw-bold]="onMentor" (click)="classAdd('mentor')" routerLink="signup">Mentor</a> |
+    <a [class.fw-bold]="onAdmin" (click)="classAdd('admin')" routerLink="signup">Admin</a>
+  </p>
+</ng-template>
